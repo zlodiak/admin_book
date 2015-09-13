@@ -2,16 +2,24 @@
 
 <h1>Listing Reviews</h1>
 
-<table>
+<table border="1">
   <thead>
     <tr>
-      <th colspan="3"></th>
+      <th>name</th>
+      <th>email</th>
+      <th>message</th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
 
   <tbody>
     <% @reviews.each do |review| %>
       <tr>
+        <td><%= review.name %></td>
+        <td><%= review.email if review.email %></td>
+        <td><%= review.message %></td>
         <td><%= link_to 'Show', review %></td>
         <td><%= link_to 'Edit', edit_review_path(review) %></td>
         <td><%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
