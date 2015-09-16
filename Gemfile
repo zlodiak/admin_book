@@ -13,6 +13,10 @@ gem 'pg'
 gem 'pry-rails' 
 gem 'faker'
 gem 'populate'
+gem 'activeadmin', github: 'activeadmin'
+#gem "meta_search", '>= 1.1.0.pre'
+#gem 'actionpack'
+#gem 'formtastic_i18n'
 
 group :test do
   gem 'rspec-rails'
