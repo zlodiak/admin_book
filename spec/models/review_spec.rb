@@ -1,7 +1,5 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe Review do
-  it "ttest" do
-    (1 + 1).should == 2
-  end
+RSpec.describe Review, type: :model do
+  # pending "add some examples to (or delete) #{__FILE__}"
 end
