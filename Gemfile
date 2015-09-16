@@ -17,6 +17,8 @@ gem 'activeadmin', github: 'activeadmin'
 #gem "meta_search", '>= 1.1.0.pre'
 #gem 'actionpack'
 #gem 'formtastic_i18n'
+gem 'devise', '~> 3.4.0'
+gem 'bcrypt-ruby'
 
 group :test do
   gem 'rspec-rails'
