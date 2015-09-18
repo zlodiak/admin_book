@@ -20,6 +20,7 @@ ActiveAdmin.register Review do
     column :email
     column :created_at
     column :updated_at    
+    column :user_id    
     actions
   end
 
