@@ -38,5 +38,5 @@
     <span>Здравствуйте, <%= current_user.email %></span>
     <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
 <% else %>
-    <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
+    <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_password_path %>
 <% end %>
