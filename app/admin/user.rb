@@ -8,8 +8,8 @@ ActiveAdmin.register User do
     column :current_sign_in_at
     column :sign_in_count
     column :created_at
-    column :role_id
-    column :superadmin
+    column :role
+    # column :superadmin
     actions
   end
 
@@ -17,12 +17,12 @@ ActiveAdmin.register User do
   filter :current_sign_in_at
   filter :sign_in_count
   filter :created_at
-  filter :role_id
+  filter :role
 
   form do |f|
     f.inputs "Admin Details" do
-      f.input :superadmin
-      f.input :role_id
+      # f.input :superadmin
+      f.input :role
       f.input :email
       f.input :password
       f.input :password_confirmation
@@ -30,4 +30,5 @@ ActiveAdmin.register User do
     f.actions
   end
 
+  permit_params :email, :password, :password_confirmation, :superadmin, :role_id
 end
