@@ -8,6 +8,20 @@ ActiveAdmin.register_page "Dashboard" do
         span I18n.t("active_admin.dashboard_welcome.welcome")
         small I18n.t("active_admin.dashboard_welcome.call_to_action")
       end
+    end 
+
+    columns do
+      column do
+        panel "Other links" do
+          link_to("to public", root_path)
+        end
+      end
+
+      column do
+        panel "other info" do
+          'lorem ipsum '
+        end
+      end      
     end
 
     # Here is an example of a simple dashboard with columns and panels.

@@ -16,12 +16,21 @@ ActiveAdmin.register Review do
   index do
     selectable_column
     id_column
-    column :name
     column :email
     column :created_at
     column :updated_at    
-    column :user_id    
+    column :user 
     actions
   end
 
+  form do |f|
+    f.inputs "Review Details" do
+      f.input :email
+      f.input :user_id
+      f.input :created_at, as: :datepicker, datepicker_options: { min_date: "2013-10-8",        max_date: "+3D" }
+    end
+    f.actions
+  end
+
+  permit_params :email, :name, :user_id, :created_at
 end

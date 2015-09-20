@@ -19,8 +19,9 @@ gem 'activeadmin', github: 'activeadmin'
 #gem 'formtastic_i18n'
 gem 'devise', '~> 3.4.0'
 gem 'bcrypt-ruby'
-gem 'activeadmin', github: 'activeadmin'
 gem 'russian'
+gem 'cancan'
+gem 'cancancan'
 
 group :test do
   gem 'rspec-rails'
