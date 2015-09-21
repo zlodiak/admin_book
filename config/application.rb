@@ -26,6 +26,8 @@ module AdminBook
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
+    config.action_mailer.default_url_options = { host: 'example.com' }
+
     config.generators do |g|
         g.test_framework        :rspec, fixtures: true, views: false
         g.fixture_replacement   :factory_girl, dir: 'spec/factories' 

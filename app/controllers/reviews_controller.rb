@@ -28,7 +28,7 @@ class ReviewsController < ApplicationController
     @review = current_user.reviews.build(review_params)
 
     if @review.save
-      PreviewMailer.welcome_email(@review).deliver_later
+      ReviewMailer.welcome_email(@review).deliver_now
       flash[:success] = 'review saved'
       redirect_to root_path
     else
