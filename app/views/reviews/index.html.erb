@@ -8,6 +8,7 @@
       <th>name</th>
       <th>email</th>
       <th>message</th>
+      <th>image</th>
       <th></th>
       <th></th>
       <th></th>
@@ -20,6 +21,9 @@
         <td><%= review.name %></td>
         <td><%= review.email if review.email %></td>
         <td><%= review.message %></td>
+        <td>
+        <%= image_tag(review.image.url(:thumb), alt: '') if review.image_file_name %>
+        </td>
         <td><%= link_to 'Show', review %></td>
         <td><%= link_to 'Edit', edit_review_path(review) %></td>
         <td><%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>

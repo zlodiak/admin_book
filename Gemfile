@@ -22,6 +22,7 @@ gem 'bcrypt-ruby'
 gem 'russian'
 gem 'cancan'
 gem 'cancancan'
+gem 'paperclip'
 
 group :test do
   gem 'rspec-rails'
