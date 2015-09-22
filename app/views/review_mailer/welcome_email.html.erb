@@ -4,13 +4,13 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>email <%= @preview.email %></h1>
+    <h1>email <%= @review.email if @review.email %></h1>
     <p>
-      name: <%= @preview.name %>.<br>
+      name: <%= @review.name %>.<br>
     </p>
     <p>
-      message: <%= @preview.message %>.
+      message: <%= @review.message %>.
     </p>
-    <p>Thanks for joining and have a great day!</p>
+    <p>logo: <%#= image_tag 'public/castle.jpg' %></p>
   </body>
 </html>
