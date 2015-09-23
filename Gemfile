@@ -23,6 +23,9 @@ gem 'russian'
 gem 'cancan'
 gem 'cancancan'
 gem 'paperclip'
+# gem 'bootstrap-wysiwyg-rails'
+gem 'bootstrap-sass', '>= 3.2'
+gem 'bootstrap-wysihtml5-rails'
 
 group :test do
   gem 'rspec-rails'

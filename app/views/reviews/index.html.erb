@@ -2,6 +2,10 @@
 
 <h1>Listing Reviews</h1>
 
+<%= link_to 'New Review', new_review_path %>
+
+<br>
+
 <table border="1">
   <thead>
     <tr>
@@ -20,7 +24,7 @@
       <tr>
         <td><%= review.name %></td>
         <td><%= review.email if review.email %></td>
-        <td><%= review.message %></td>
+        <td><%= review.message.html_safe %></td>
         <td>
         <%= image_tag(review.image.url(:thumb), alt: '') if review.image_file_name %>
         </td>
@@ -32,9 +36,9 @@
   </tbody>
 </table>
 
-<br>
 
-<%= link_to 'New Review', new_review_path %>
+
+
 
 
 

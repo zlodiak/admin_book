@@ -2,6 +2,8 @@ class ReviewsController < ApplicationController
   #before_filter :authenticate_active_admin_user!, only: [:edit, :update, :destroy]
   before_action :set_review, only: [:show, :edit, :update, :destroy]
 
+  #layout 'appl_test'
+
   # GET /reviews
   # GET /reviews.json
   def index

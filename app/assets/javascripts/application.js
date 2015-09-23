@@ -14,3 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require bootstrap-wysihtml5
+
+$(document).ready(function(){
+  $('.wysiwyg').each(function(i, elem) {
+    $(elem).wysihtml5();
+  });
+});
