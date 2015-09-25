@@ -25,13 +25,13 @@ gem 'paperclip'
 # gem 'bootstrap-wysiwyg-rails'
 gem 'bootstrap-sass', '>= 3.2'
 gem 'bootstrap-wysihtml5-rails'
+gem 'mysql'
 
 group :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
   gem 'capybara' 
-  gem 'sqlite3' 
 end
 
 group :development, :test do
