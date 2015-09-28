@@ -9,12 +9,21 @@ class Ability
       if(user.role.title == 'admin')
         can :manage, :all
       elsif (user.role.title == 'manager')     
-        can :read, :all
+        can :read, Review
+        can :update, Review
+        can :create, Review
+        cannot :delete, Review
       elsif (user.role.title == 'user')     
-        cannot :manage, :all
+        can :read, Review
+        cannot :update, Review
+        can :create, Review
+        cannot :delete, Review
       end   
     else
-
+      can :read, Review
+      cannot :update, Review
+      cannot :create, Review
+      cannot :delete, Review
     end   
 
  
