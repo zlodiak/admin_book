@@ -2,7 +2,7 @@
 
 <h1>Listing Reviews</h1>
 
-<%= link_to 'New Review', new_review_path %>
+<%= link_to 'New Review', new_review_path if can? :create, Review %>
 
 <br>
 
@@ -28,9 +28,9 @@
         <td>
         <%= image_tag(review.image.url(:thumb), alt: '') if review.image_file_name %>
         </td>
-        <td><%= link_to 'Show', review %></td>
-        <td><%= link_to 'Edit', edit_review_path(review) %></td>
-        <td><%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', review if can? :read, Review %></td>
+        <td><%= link_to 'Edit', edit_review_path(review) if can? :update, Review %></td>
+        <td><%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy, Review %></td>
       </tr>
     <% end %>
   </tbody>
