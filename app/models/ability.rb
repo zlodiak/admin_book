@@ -7,6 +7,7 @@ class Ability
  
     if user.role_id
       if(user.role.title == 'admin')
+        
         can :manage, :all
       elsif (user.role.title == 'manager')     
         can :read, Review
